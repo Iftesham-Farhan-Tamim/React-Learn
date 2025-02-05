@@ -12,9 +12,7 @@ function App() {
 
   return (
     <div>
-
-      <Button incrementcount={handleClick}
-        text="click me" >
+      <Button text="click me" incrementcount={handleClick}>
         <h1>{count}</h1>
       </Button>
 
@@ -26,7 +24,6 @@ function App() {
       <Card>
         Hi There, How Are You
       </Card>
-
     </div>
   )
 }
