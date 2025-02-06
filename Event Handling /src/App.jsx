@@ -1,34 +1,46 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    alert("I am Clicked");
+  }
+
+  function handleMouseOver() {
+    alert("On mouse hover");
+  }
+
+  function handleInputChange(e) {
+    // console.log("The value has changed in input");
+    console.log("Value till now: ", e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Shall I submit the form?");
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleInputChange} />
+        <button type='submit'>Submit</button>
+      </form>
+
+      <br />
+
+      <p onMouseOver={handleMouseOver} style={{ border: "1px solid black" }}>
+        I am a Para
       </p>
-    </>
+
+      <br />
+
+      <button onClick={handleClick}>
+        Click me
+      </button>
+    </div>
   )
 }
 
