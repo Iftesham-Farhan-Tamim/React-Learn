@@ -62,7 +62,7 @@ function App() {
       {/* <LoggerComponent /> */}
       {/* <TimerComponent /> */}
       {/* <DataFetcher /> */}
-      {/* <ResizeComponent /> */}
+      <ResizeComponent />
       {/* <MultiEffectComponent /> */}
 
 
