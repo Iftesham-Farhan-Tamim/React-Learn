@@ -11,7 +11,7 @@ const About = () => {
         <div>
             <h1>About Page</h1>
             <button onClick={handdleClick}>
-                Move To Dash Board
+                Move To Dash Board Page
             </button>
         </div>
     )
